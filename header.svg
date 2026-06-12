@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="260" viewBox="0 0 800 260" fill="none">
+  <defs>
+    <!-- Background Card Gradient (Usu Koubai Blossom to Berry Good) -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B97D7B" />
+      <stop offset="100%" stop-color="#ECC4C3" />
+    </linearGradient>
+
+    <!-- Clay Gear Gradient (Warm Fog to Meadow Mauve) -->
+    <linearGradient id="gear-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DDD3C9" />
+      <stop offset="100%" stop-color="#928E5E" />
+    </linearGradient>
+
+    <!-- Clay Resistor Gradient -->
+    <linearGradient id="resistor-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ECC4C3" />
+      <stop offset="100%" stop-color="#B97D7B" />
+    </linearGradient>
+
+    <!-- Puffy Clay Highlights & Shadows for Card and Shapes -->
+    <radialGradient id="puffy-highlight" cx="20%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.55" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="puffy-shadow" cx="80%" cy="80%" r="60%">
+      <stop offset="0%" stop-color="#575527" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#575527" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Text Gradient (White to Warm Fog) -->
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#DDD3C9" />
+    </linearGradient>
+
+    <!-- Clay Sphere Lighting (Radial Highlight/Shadow Overlay) -->
+    <radialGradient id="sphere-highlight" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.7" />
+      <stop offset="40%" stop-color="#FFFFFF" stop-opacity="0" />
+      <stop offset="100%" stop-color="#575527" stop-opacity="0.3" />
+    </radialGradient>
+  </defs>
+
+  <style>
+    /* CSS animations inside SVG */
+    @keyframes spin-gear {
+      0% { transform: translate(640px, 110px) rotate(0deg); }
+      100% { transform: translate(640px, 110px) rotate(360deg); }
+    }
+    @keyframes float-r {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(5deg); }
+    }
+    @keyframes float-c {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(8px); }
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    .float-gear {
+      animation: spin-gear 16s linear infinite;
+      transform-origin: 0px 0px;
+    }
+    .float-resistor {
+      animation: float-r 5s ease-in-out infinite;
+      transform-origin: 535px 70px;
+    }
+    .float-crosshair {
+      animation: float-c 4s ease-in-out infinite;
+      transform-origin: 710px 160px;
+    }
+    .cursor-blink {
+      animation: blink 1s step-end infinite;
+    }
+  </style>
+
+  <!-- Neobrutalist Hard Shadow (Soldier Green) -->
+  <rect x="36" y="36" width="728" height="188" rx="28" fill="#575527" />
+
+  <!-- Main Card Body -->
+  <rect x="24" y="24" width="728" height="188" rx="28" fill="url(#bg-grad)" stroke="#575527" stroke-width="5" />
+
+  <!-- Clay Inflated Highlight & Inner Shadow -->
+  <rect x="27" y="27" width="722" height="182" rx="25" fill="url(#puffy-highlight)" pointer-events="none" />
+  <rect x="27" y="27" width="722" height="182" rx="25" fill="url(#puffy-shadow)" pointer-events="none" />
+
+  <!-- Technical Grid overlay (subtle lines) -->
+  <line x1="24" y1="80" x2="752" y2="80" stroke="#575527" stroke-width="1.5" stroke-opacity="0.15" />
+  <line x1="24" y1="140" x2="752" y2="140" stroke="#575527" stroke-width="1.5" stroke-opacity="0.15" />
+  <line x1="160" y1="24" x2="160" y2="212" stroke="#575527" stroke-width="1.5" stroke-opacity="0.15" />
+  <line x1="480" y1="24" x2="480" y2="212" stroke="#575527" stroke-width="1.5" stroke-opacity="0.15" />
+
+  <!-- Decorative Corner Tech Indicators -->
+  <path d="M 35,35 L 45,35 M 35,35 L 35,45" stroke="#575527" stroke-width="2" />
+  <path d="M 741,35 L 731,35 M 741,35 L 741,45" stroke="#575527" stroke-width="2" />
+  <path d="M 35,201 L 45,201 M 35,201 L 35,191" stroke="#575527" stroke-width="2" />
+  <path d="M 741,201 L 731,201 M 741,201 L 741,191" stroke="#575527" stroke-width="2" />
+
+  <!-- Brand Typography: "angela" -->
+  <!-- Shadow Text -->
+  <text x="65" y="113" font-family="-apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', 'Arial Black', sans-serif" font-size="58" font-weight="900" fill="#575527">angela</text>
+  <!-- Main Text -->
+  <text x="60" y="108" font-family="-apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', 'Arial Black', sans-serif" font-size="58" font-weight="900" fill="url(#text-grad)" stroke="#575527" stroke-width="4.5">angela</text>
+
+  <!-- Monospace Subtitle Terminal Drawer -->
+  <rect x="62" y="138" width="380" height="34" rx="10" fill="#575527" />
+  <rect x="58" y="134" width="380" height="34" rx="10" fill="#DDD3C9" stroke="#575527" stroke-width="3" />
+  <text x="75" y="156" font-family="'Fira Code', Monaco, Consolas, monospace" font-size="12" font-weight="900" fill="#575527">
+    IIT BHILAI // 2ND YEAR MECHATRONICS<tspan class="cursor-blink">|</tspan>
+  </text>
+
+  <!-- Technical Status line -->
+  <circle cx="68" cy="190" r="5" fill="#928E5E" stroke="#575527" stroke-width="1.5" />
+  <text x="82" y="194" font-family="'Fira Code', Monaco, monospace" font-size="10" font-weight="900" fill="#575527">
+    SYS.STATUS: ACTIVE_DEV_OK [ENG_2026]
+  </text>
+
+  <!-- ================= MECHANICAL/ELECTRONIC FLOATING SHAPES ================= -->
+
+  <!-- Resistor/Capacitor Shape (Float-Resistor) -->
+  <g class="float-resistor">
+    <!-- Leads (wires) -->
+    <line x1="495" y1="70" x2="575" y2="70" stroke="#575527" stroke-width="4.5" stroke-linecap="round" />
+    <!-- Body Shadow -->
+    <rect x="515" y="58" width="40" height="24" rx="8" fill="#575527" />
+    <!-- Body -->
+    <rect x="510" y="54" width="40" height="24" rx="8" fill="url(#resistor-grad)" stroke="#575527" stroke-width="3.5" />
+    <rect x="512" y="56" width="36" height="20" rx="6" fill="url(#sphere-highlight)" pointer-events="none" />
+    <!-- Bands -->
+    <rect x="518" y="55" width="4" height="22" fill="#575527" />
+    <rect x="528" y="55" width="4" height="22" fill="#928E5E" />
+    <rect x="538" y="55" width="4" height="22" fill="#DDD3C9" />
+  </g>
+
+  <!-- Spinning 3D Clay Gear (Float-Gear) -->
+  <g class="float-gear">
+    <!-- Teeth Shadow overlay (we apply it as a group in base shadow inside styling, or just render teeth) -->
+    <rect x="-10" y="-34" width="20" height="68" rx="5" fill="#575527" transform="rotate(0)" />
+    <rect x="-10" y="-34" width="20" height="68" rx="5" fill="#575527" transform="rotate(45)" />
+    <rect x="-10" y="-34" width="20" height="68" rx="5" fill="#575527" transform="rotate(90)" />
+    <rect x="-10" y="-34" width="20" height="68" rx="5" fill="#575527" transform="rotate(135)" />
+    <circle cx="0" cy="0" r="26" fill="#575527" />
+    
+    <!-- Outer Teeth (Faces) -->
+    <rect x="-10" y="-34" width="20" height="68" rx="5" fill="url(#gear-grad)" stroke="#575527" stroke-width="3.5" transform="rotate(0)" />
+    <rect x="-10" y="-34" width="20" height="68" rx="5" fill="url(#gear-grad)" stroke="#575527" stroke-width="3.5" transform="rotate(45)" />
+    <rect x="-10" y="-34" width="20" height="68" rx="5" fill="url(#gear-grad)" stroke="#575527" stroke-width="3.5" transform="rotate(90)" />
+    <rect x="-10" y="-34" width="20" height="68" rx="5" fill="url(#gear-grad)" stroke="#575527" stroke-width="3.5" transform="rotate(135)" />
+    
+    <!-- Center circle hub -->
+    <circle cx="0" cy="0" r="26" fill="url(#gear-grad)" stroke="#575527" stroke-width="3.5" />
+    <!-- Clay overlay highlight -->
+    <circle cx="0" cy="0" r="26" fill="url(#sphere-highlight)" pointer-events="none" />
+    <!-- Inner cutout hole (styled same as background color at this point) -->
+    <circle cx="0" cy="0" r="10" fill="#E8B0B4" stroke="#575527" stroke-width="3.5" />
+  </g>
+
+  <!-- Crosshair Target (Float-Crosshair) -->
+  <g class="float-crosshair">
+    <!-- Shadow -->
+    <circle cx="714" cy="164" r="18" fill="#575527" />
+    <!-- Base -->
+    <circle cx="710" cy="160" r="18" fill="url(#resistor-grad)" stroke="#575527" stroke-width="3" />
+    <circle cx="710" cy="160" r="18" fill="url(#sphere-highlight)" pointer-events="none" />
+    <!-- Reticle lines -->
+    <circle cx="710" cy="160" r="8" fill="none" stroke="#575527" stroke-width="2" />
+    <line x1="710" y1="147" x2="710" y2="173" stroke="#575527" stroke-width="2.5" />
+    <line x1="697" y1="160" x2="723" y2="160" stroke="#575527" stroke-width="2.5" />
+  </g>
+</svg>

@@ -1,0 +1,232 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="460" viewBox="0 0 800 460" fill="none">
+  <defs>
+    <!-- Card Background Gradient (Usu Koubai Blossom to Warm Fog) -->
+    <linearGradient id="card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B97D7B" />
+      <stop offset="100%" stop-color="#DDD3C9" />
+    </linearGradient>
+
+    <!-- Puffy Clay Highlights & Shadows for Card and Buttons -->
+    <radialGradient id="puffy-highlight" cx="20%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.55" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="puffy-shadow" cx="80%" cy="80%" r="60%">
+      <stop offset="0%" stop-color="#575527" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#575527" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Button Clay Lighting Overlay -->
+    <radialGradient id="btn-highlight" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0" />
+      <stop offset="100%" stop-color="#575527" stop-opacity="0.2" />
+    </radialGradient>
+  </defs>
+
+  <style>
+    .btn-group {
+      cursor: pointer;
+    }
+    .btn-face {
+      transition: transform 0.12s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    .btn-group:hover .btn-face {
+      transform: translate(4px, 4px);
+    }
+    .label-text {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-weight: 900;
+      fill: #575527;
+    }
+    .btn-text {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-weight: 800;
+      font-size: 13px;
+      fill: #575527;
+    }
+  </style>
+
+  <!-- Background Card Shadow (Soldier Green) -->
+  <rect x="36" y="36" width="728" height="388" rx="28" fill="#575527" />
+
+  <!-- Main Card Body -->
+  <rect x="24" y="24" width="728" height="388" rx="28" fill="url(#card-bg)" stroke="#575527" stroke-width="5" />
+
+  <!-- Main Card Clay Shading -->
+  <rect x="27" y="27" width="722" height="382" rx="25" fill="url(#puffy-highlight)" pointer-events="none" />
+  <rect x="27" y="27" width="722" height="382" rx="25" fill="url(#puffy-shadow)" pointer-events="none" />
+
+  <!-- Technical Grid overlay (subtle lines) -->
+  <line x1="24" y1="80" x2="752" y2="80" stroke="#575527" stroke-width="1.5" stroke-opacity="0.15" />
+  <line x1="160" y1="24" x2="160" y2="412" stroke="#575527" stroke-width="1.5" stroke-opacity="0.15" />
+
+  <!-- Card Title -->
+  <text x="60" y="65" class="label-text" font-size="22" letter-spacing="-0.5px">🛠️ WORKSPACE &amp; TECH STACK</text>
+
+  <!-- ================= ROW 1: LANGUAGES ================= -->
+  <text x="60" y="116" class="label-text" font-size="11" letter-spacing="1px" opacity="0.8">LANGUAGES</text>
+
+  <!-- C++ Badge (Berry Good) -->
+  <a href="https://en.cppreference.com/w/" target="_blank" class="btn-group">
+    <rect x="184" y="94" width="75" height="42" rx="14" fill="#575527" />
+    <g class="btn-face">
+      <rect x="180" y="90" width="75" height="42" rx="14" fill="#ECC4C3" stroke="#575527" stroke-width="3" />
+      <rect x="182" y="92" width="71" height="38" rx="12" fill="url(#btn-highlight)" pointer-events="none" />
+      <text x="217.5" y="116" class="btn-text" text-anchor="middle">C++</text>
+    </g>
+  </a>
+
+  <!-- Python Badge (Berry Good) -->
+  <a href="https://www.python.org/" target="_blank" class="btn-group">
+    <rect x="269" y="94" width="90" height="42" rx="14" fill="#575527" />
+    <g class="btn-face">
+      <rect x="265" y="90" width="90" height="42" rx="14" fill="#ECC4C3" stroke="#575527" stroke-width="3" />
+      <rect x="267" y="92" width="86" height="38" rx="12" fill="url(#btn-highlight)" pointer-events="none" />
+      <text x="310" y="116" class="btn-text" text-anchor="middle">Python</text>
+    </g>
+  </a>
+
+  <!-- JavaScript Badge (Berry Good) -->
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="btn-group">
+    <rect x="369" y="94" width="105" height="42" rx="14" fill="#575527" />
+    <g class="btn-face">
+      <rect x="365" y="90" width="105" height="42" rx="14" fill="#ECC4C3" stroke="#575527" stroke-width="3" />
+      <rect x="367" y="92" width="101" height="38" rx="12" fill="url(#btn-highlight)" pointer-events="none" />
+      <text x="417.5" y="116" class="btn-text" text-anchor="middle">JavaScript</text>
+    </g>
+  </a>
+
+  <!-- TypeScript Badge (Berry Good) -->
+  <a href="https://www.typescriptlang.org/" target="_blank" class="btn-group">
+    <rect x="484" y="94" width="105" height="42" rx="14" fill="#575527" />
+    <g class="btn-face">
+      <rect x="480" y="90" width="105" height="42" rx="14" fill="#ECC4C3" stroke="#575527" stroke-width="3" />
+      <rect x="482" y="92" width="101" height="38" rx="12" fill="url(#btn-highlight)" pointer-events="none" />
+      <text x="532.5" y="116" class="btn-text" text-anchor="middle">TypeScript</text>
+    </g>
+  </a>
+
+
+  <!-- ================= ROW 2: ROBOTICS ================= -->
+  <text x="60" y="196" class="label-text" font-size="11" letter-spacing="1px" opacity="0.8">ROBOTICS</text>
+
+  <!-- ROS / ROS2 Badge (Usu Koubai Blossom) -->
+  <a href="https://www.ros.org/" target="_blank" class="btn-group">
+    <rect x="184" y="174" width="110" height="42" rx="14" fill="#575527" />
+    <g class="btn-face">
+      <rect x="180" y="170" width="110" height="42" rx="14" fill="#B97D7B" stroke="#575527" stroke-width="3" />
+      <rect x="182" y="172" width="106" height="38" rx="12" fill="url(#btn-highlight)" pointer-events="none" />
+      <!-- Text fill is Warm Fog to contrast with darker Usu Koubai background -->
+      <text x="235" y="196" class="btn-text" fill="#DDD3C9" text-anchor="middle">ROS / ROS2</text>
+    </g>
+  </a>
+
+  <!-- C Badge (Usu Koubai Blossom) -->
+  <a href="https://en.cppreference.com/w/c" target="_blank" class="btn-group">
+    <rect x="304" y="174" width="50" height="42" rx="14" fill="#575527" />
+    <g class="btn-face">
+      <rect x="300" y="170" width="50" height="42" rx="14" fill="#B97D7B" stroke="#575527" stroke-width="3" />
+      <rect x="302" y="172" width="46" height="38" rx="12" fill="url(#btn-highlight)" pointer-events="none" />
+      <text x="325" y="196" class="btn-text" fill="#DDD3C9" text-anchor="middle">C</text>
+    </g>
+  </a>
+
+  <!-- MATLAB Badge (Usu Koubai Blossom) -->
+  <a href="https://www.mathworks.com/products/matlab.html" target="_blank" class="btn-group">
+    <rect x="364" y="174" width="95" height="42" rx="14" fill="#575527" />
+    <g class="btn-face">
+      <rect x="360" y="170" width="95" height="42" rx="14" fill="#B97D7B" stroke="#575527" stroke-width="3" />
+      <rect x="362" y="172" width="91" height="38" rx="12" fill="url(#btn-highlight)" pointer-events="none" />
+      <text x="407.5" y="196" class="btn-text" fill="#DDD3C9" text-anchor="middle">MATLAB</text>
+    </g>
+  </a>
+
+  <!-- Arduino Badge (Usu Koubai Blossom) -->
+  <a href="https://www.arduino.cc/" target="_blank" class="btn-group">
+    <rect x="469" y="174" width="90" height="42" rx="14" fill="#575527" />
+    <g class="btn-face">
+      <rect x="465" y="170" width="90" height="42" rx="14" fill="#B97D7B" stroke="#575527" stroke-width="3" />
+      <rect x="467" y="172" width="86" height="38" rx="12" fill="url(#btn-highlight)" pointer-events="none" />
+      <text x="510" y="196" class="btn-text" fill="#DDD3C9" text-anchor="middle">Arduino</text>
+    </g>
+  </a>
+
+
+  <!-- ================= ROW 3: WEB / APPS ================= -->
+  <text x="60" y="276" class="label-text" font-size="11" letter-spacing="1px" opacity="0.8">WEB / APPS</text>
+
+  <!-- React Badge (Meadow Mauve) -->
+  <a href="https://react.dev/" target="_blank" class="btn-group">
+    <rect x="184" y="254" width="85" height="42" rx="14" fill="#575527" />
+    <g class="btn-face">
+      <rect x="180" y="250" width="85" height="42" rx="14" fill="#928E5E" stroke="#575527" stroke-width="3" />
+      <rect x="182" y="252" width="81" height="38" rx="12" fill="url(#btn-highlight)" pointer-events="none" />
+      <text x="222.5" y="276" class="btn-text" fill="#DDD3C9" text-anchor="middle">React</text>
+    </g>
+  </a>
+
+  <!-- Next.js Badge (Meadow Mauve) -->
+  <a href="https://nextjs.org/" target="_blank" class="btn-group">
+    <rect x="279" y="254" width="90" height="42" rx="14" fill="#575527" />
+    <g class="btn-face">
+      <rect x="275" y="250" width="90" height="42" rx="14" fill="#928E5E" stroke="#575527" stroke-width="3" />
+      <rect x="277" y="252" width="86" height="38" rx="12" fill="url(#btn-highlight)" pointer-events="none" />
+      <text x="320" y="276" class="btn-text" fill="#DDD3C9" text-anchor="middle">Next.js</text>
+    </g>
+  </a>
+
+  <!-- Node.js Badge (Meadow Mauve) -->
+  <a href="https://nodejs.org/" target="_blank" class="btn-group">
+    <rect x="379" y="254" width="95" height="42" rx="14" fill="#575527" />
+    <g class="btn-face">
+      <rect x="375" y="250" width="95" height="42" rx="14" fill="#928E5E" stroke="#575527" stroke-width="3" />
+      <rect x="377" y="252" width="91" height="38" rx="12" fill="url(#btn-highlight)" pointer-events="none" />
+      <text x="422.5" y="276" class="btn-text" fill="#DDD3C9" text-anchor="middle">Node.js</text>
+    </g>
+  </a>
+
+
+  <!-- ================= ROW 4: DEV TOOLS ================= -->
+  <text x="60" y="356" class="label-text" font-size="11" letter-spacing="1px" opacity="0.8">DEV TOOLS</text>
+
+  <!-- Git Badge (Warm Fog) -->
+  <a href="https://git-scm.com/" target="_blank" class="btn-group">
+    <rect x="184" y="334" width="70" height="42" rx="14" fill="#575527" />
+    <g class="btn-face">
+      <rect x="180" y="330" width="70" height="42" rx="14" fill="#DDD3C9" stroke="#575527" stroke-width="3" />
+      <rect x="182" y="332" width="66" height="38" rx="12" fill="url(#btn-highlight)" pointer-events="none" />
+      <text x="215" y="356" class="btn-text" text-anchor="middle">Git</text>
+    </g>
+  </a>
+
+  <!-- Docker Badge (Warm Fog) -->
+  <a href="https://www.docker.com/" target="_blank" class="btn-group">
+    <rect x="264" y="334" width="95" height="42" rx="14" fill="#575527" />
+    <g class="btn-face">
+      <rect x="260" y="330" width="95" height="42" rx="14" fill="#DDD3C9" stroke="#575527" stroke-width="3" />
+      <rect x="262" y="332" width="91" height="38" rx="12" fill="url(#btn-highlight)" pointer-events="none" />
+      <text x="307.5" y="356" class="btn-text" text-anchor="middle">Docker</text>
+    </g>
+  </a>
+
+  <!-- PostgreSQL Badge (Warm Fog) -->
+  <a href="https://www.postgresql.org/" target="_blank" class="btn-group">
+    <rect x="369" y="334" width="110" height="42" rx="14" fill="#575527" />
+    <g class="btn-face">
+      <rect x="365" y="330" width="110" height="42" rx="14" fill="#DDD3C9" stroke="#575527" stroke-width="3" />
+      <rect x="367" y="332" width="106" height="38" rx="12" fill="url(#btn-highlight)" pointer-events="none" />
+      <text x="420" y="356" class="btn-text" text-anchor="middle">PostgreSQL</text>
+    </g>
+  </a>
+
+  <!-- VS Code Badge (Warm Fog) -->
+  <a href="https://code.visualstudio.com/" target="_blank" class="btn-group">
+    <rect x="489" y="334" width="100" height="42" rx="14" fill="#575527" />
+    <g class="btn-face">
+      <rect x="485" y="330" width="100" height="42" rx="14" fill="#DDD3C9" stroke="#575527" stroke-width="3" />
+      <rect x="487" y="332" width="96" height="38" rx="12" fill="url(#btn-highlight)" pointer-events="none" />
+      <text x="535" y="356" class="btn-text" text-anchor="middle">VS Code</text>
+    </g>
+  </a>
+</svg>
