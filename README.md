@@ -1,13 +1,13 @@
 <div align="center">
   <!-- Claymorphic Brutalist Header SVG -->
-  <img src="./header.svg" width="800px" alt="angela's Banner" />
+  <img src="./header.svg?v=3" width="800px" alt="angela's Banner" />
 </div>
 
 <br />
 
 <!-- Interactive Claymorphic Tech Stack SVG -->
 <div align="center">
-  <img src="./techstack.svg" width="800px" alt="My Tech Stack" />
+  <img src="./techstack.svg?v=3" width="800px" alt="My Tech Stack" />
 </div>
 
 <br />

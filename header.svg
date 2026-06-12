@@ -155,7 +155,7 @@
     <!-- Clay overlay highlight -->
     <circle cx="0" cy="0" r="26" fill="url(#sphere-highlight)" pointer-events="none" />
     <!-- Inner cutout hole (styled same as background color at this point) -->
-    <circle cx="0" cy="0" r="10" fill="#E8B0B4" stroke="#575527" stroke-width="3.5" />
+    <circle cx="0" cy="0" r="10" fill="#ECC4C3" stroke="#575527" stroke-width="3.5" />
   </g>
 
   <!-- Crosshair Target (Float-Crosshair) -->
