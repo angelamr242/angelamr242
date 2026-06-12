@@ -42,7 +42,17 @@
     </radialGradient>
   </defs>
 
-  <style>
+  <style type="text/css"><![CDATA[
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Silkscreen:wght@400;700&family=VT323&display=swap');
+
+    .title-text {
+      font-family: 'Montserrat', -apple-system, sans-serif;
+      font-weight: 900;
+    }
+    .pixel-text {
+      font-family: 'Bitcount', 'Silkscreen', 'VT323', monospace;
+    }
+
     /* CSS animations inside SVG */
     @keyframes spin-gear {
       0% { transform: translate(640px, 110px) rotate(0deg); }
@@ -75,7 +85,7 @@
     .cursor-blink {
       animation: blink 1s step-end infinite;
     }
-  </style>
+  ]]></style>
 
   <!-- Neobrutalist Hard Shadow (Soldier Green) -->
   <rect x="36" y="36" width="728" height="188" rx="28" fill="#575527" />
@@ -101,20 +111,20 @@
 
   <!-- Brand Typography: "angela" -->
   <!-- Shadow Text -->
-  <text x="65" y="113" font-family="-apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', 'Arial Black', sans-serif" font-size="58" font-weight="900" fill="#575527">angela</text>
+  <text x="65" y="113" class="title-text" font-size="58" fill="#575527">angela</text>
   <!-- Main Text -->
-  <text x="60" y="108" font-family="-apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', 'Arial Black', sans-serif" font-size="58" font-weight="900" fill="url(#text-grad)" stroke="#575527" stroke-width="4.5">angela</text>
+  <text x="60" y="108" class="title-text" font-size="58" fill="url(#text-grad)" stroke="#575527" stroke-width="4.5">angela</text>
 
   <!-- Monospace Subtitle Terminal Drawer -->
   <rect x="62" y="138" width="380" height="34" rx="10" fill="#575527" />
   <rect x="58" y="134" width="380" height="34" rx="10" fill="#DDD3C9" stroke="#575527" stroke-width="3" />
-  <text x="75" y="156" font-family="'Fira Code', Monaco, Consolas, monospace" font-size="12" font-weight="900" fill="#575527">
+  <text x="75" y="156" class="pixel-text" font-size="12" fill="#575527">
     IIT BHILAI // 2ND YEAR MECHATRONICS<tspan class="cursor-blink">|</tspan>
   </text>
 
   <!-- Technical Status line -->
   <circle cx="68" cy="190" r="5" fill="#928E5E" stroke="#575527" stroke-width="1.5" />
-  <text x="82" y="194" font-family="'Fira Code', Monaco, monospace" font-size="10" font-weight="900" fill="#575527">
+  <text x="82" y="194" class="pixel-text" font-size="11" fill="#575527">
     SYS.STATUS: ACTIVE_DEV_OK [ENG_2026]
   </text>
 
@@ -137,7 +147,7 @@
 
   <!-- Spinning 3D Clay Gear (Float-Gear) -->
   <g class="float-gear">
-    <!-- Teeth Shadow overlay (we apply it as a group in base shadow inside styling, or just render teeth) -->
+    <!-- Teeth Shadow overlay -->
     <rect x="-10" y="-34" width="20" height="68" rx="5" fill="#575527" transform="rotate(0)" />
     <rect x="-10" y="-34" width="20" height="68" rx="5" fill="#575527" transform="rotate(45)" />
     <rect x="-10" y="-34" width="20" height="68" rx="5" fill="#575527" transform="rotate(90)" />
@@ -154,7 +164,7 @@
     <circle cx="0" cy="0" r="26" fill="url(#gear-grad)" stroke="#575527" stroke-width="3.5" />
     <!-- Clay overlay highlight -->
     <circle cx="0" cy="0" r="26" fill="url(#sphere-highlight)" pointer-events="none" />
-    <!-- Inner cutout hole (styled same as background color at this point) -->
+    <!-- Inner cutout hole -->
     <circle cx="0" cy="0" r="10" fill="#ECC4C3" stroke="#575527" stroke-width="3.5" />
   </g>
 
